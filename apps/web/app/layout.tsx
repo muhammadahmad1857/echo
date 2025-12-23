@@ -11,7 +11,7 @@ const fontSans = Geist({
 
 export const metadata:Metadata = {
   title: "Main web App",
-  description: "This is the web app",
+  description: "This is the web app....",
 }
 
 const fontMono = Geist_Mono({
