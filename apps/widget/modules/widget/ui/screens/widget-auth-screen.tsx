@@ -15,7 +15,6 @@ import {zodResolver} from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { api } from "@workspace/backend/_generated/api"
 import { useMutation} from "convex/react"
-import { platform } from 'os'
 import { Doc } from '@workspace/backend/_generated/dataModel'
 
 const WidgetAuthScreen = () => {
@@ -39,8 +38,8 @@ const WidgetAuthScreen = () => {
 
     const onSubmit = async (data: z.infer<typeof WidgetAuthSchema>) => {
         if(!organizationId) return
-        
-        const metadata:Doc<"ContactSession">["metadata"] = {
+
+        const metadata:Doc<"contactSession">["metadata"] = {
             userAgent:navigator.userAgent,
             language:navigator.language,
             languages:navigator.languages?.join(","),
